@@ -1,0 +1,1 @@
+require "mongoid_autoinc_id/auto_increment"

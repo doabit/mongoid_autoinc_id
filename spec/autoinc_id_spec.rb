@@ -42,4 +42,9 @@ describe "Mongoid::AutoIncrement" do
     post = Post.new
     post.id.should be(nil)
   end
+
+  it "should create id for embedded document" do
+    city = City.create(name: 'city', areas: [{name: 'area'}])
+    city.areas.first.id.should == 1
+  end
 end
